@@ -26,6 +26,8 @@ import UIKit
 final class CityListViewController: UIViewController,
                                     UICollectionViewDataSource,
                                     UICollectionViewDelegateFlowLayout {
+    unowned var presenter: CityListPresenter!
+
     // MARK: - Properties
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -39,35 +41,33 @@ final class CityListViewController: UIViewController,
         return collectionView
     }()
 
-    private var cityDataSource: [String] = ["City1", "City2", "City3"]
-
     // MARK: - UIViewController functions
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView.reloadData()
+    }
+
     // MARK: - UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cityDataSource.count
+        return presenter.getNumberOfCells()
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        cell.backgroundColor = .gray
-
-        let cityLabel = UILabel(frame: cell.contentView.bounds)
-        cityLabel.text = cityDataSource[indexPath.item]
-        cityLabel.textAlignment = .center
-        cityLabel.textColor = .white
-        cell.contentView.addSubview(cityLabel)
-
+        as! CityListCellEntity
+        let city = presenter.getCity(index: indexPath.row)
+        cell.cityLabel.text = city.name
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let _ = cityDataSource[indexPath.item]
-        // Handle the selection, navigate to the City Profile screen, etc.
+        let city = presenter.getCity(index: indexPath.row)
+        presenter.didChooseCity(city: city)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -81,7 +81,7 @@ final class CityListViewController: UIViewController,
         // Configure collection view
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.register(CityListCellEntity.self, forCellWithReuseIdentifier: "Cell")
 
         // Add collection view to the view hierarchy
         view.addSubview(collectionView)

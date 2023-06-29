@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B32A0C382A4C175500F9A343 /* CityListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A0C372A4C175500F9A343 /* CityListPresenter.swift */; };
+		B32A0C3A2A4C17FF00F9A343 /* CityListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A0C392A4C17FF00F9A343 /* CityListRouter.swift */; };
+		B32A0C3C2A4C1AE600F9A343 /* CityProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A0C3B2A4C1AE600F9A343 /* CityProfileRouter.swift */; };
+		B32A0C3E2A4C1B7100F9A343 /* CityProfileContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A0C3D2A4C1B7100F9A343 /* CityProfileContainer.swift */; };
+		B32A0C412A4C33EA00F9A343 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A0C402A4C33EA00F9A343 /* RootRouter.swift */; };
+		B32A0C432A4C33F800F9A343 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A0C422A4C33F800F9A343 /* RootViewController.swift */; };
+		B32A0C452A4C39D100F9A343 /* CityListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A0C442A4C39D100F9A343 /* CityListContainer.swift */; };
+		B362F9A12A4DA91A009649B4 /* CityWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B362F9A02A4DA919009649B4 /* CityWeatherService.swift */; };
+		B3A726EF2A4DB85600C99552 /* CityProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A726EE2A4DB85600C99552 /* CityProfilePresenter.swift */; };
+		B3A726F12A4DBFBF00C99552 /* CityListCellEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A726F02A4DBFBF00C99552 /* CityListCellEntity.swift */; };
 		E2DB5FC62A3C079100D3B88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB5FC52A3C079100D3B88F /* AppDelegate.swift */; };
 		E2DB5FC82A3C079100D3B88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB5FC72A3C079100D3B88F /* SceneDelegate.swift */; };
 		E2DB5FCA2A3C079100D3B88F /* CityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB5FC92A3C079100D3B88F /* CityListViewController.swift */; };
@@ -17,6 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B32A0C372A4C175500F9A343 /* CityListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListPresenter.swift; sourceTree = "<group>"; };
+		B32A0C392A4C17FF00F9A343 /* CityListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListRouter.swift; sourceTree = "<group>"; };
+		B32A0C3B2A4C1AE600F9A343 /* CityProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityProfileRouter.swift; sourceTree = "<group>"; };
+		B32A0C3D2A4C1B7100F9A343 /* CityProfileContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityProfileContainer.swift; sourceTree = "<group>"; };
+		B32A0C402A4C33EA00F9A343 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		B32A0C422A4C33F800F9A343 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		B32A0C442A4C39D100F9A343 /* CityListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListContainer.swift; sourceTree = "<group>"; };
+		B362F9A02A4DA919009649B4 /* CityWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherService.swift; sourceTree = "<group>"; };
+		B3A726EE2A4DB85600C99552 /* CityProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityProfilePresenter.swift; sourceTree = "<group>"; };
+		B3A726F02A4DBFBF00C99552 /* CityListCellEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListCellEntity.swift; sourceTree = "<group>"; };
 		E2DB5FC22A3C079100D3B88F /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2DB5FC52A3C079100D3B88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2DB5FC72A3C079100D3B88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +59,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B32A0C3F2A4C33DB00F9A343 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				B32A0C402A4C33EA00F9A343 /* RootRouter.swift */,
+				B32A0C422A4C33F800F9A343 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		B362F99F2A4DA8A8009649B4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B362F9A02A4DA919009649B4 /* CityWeatherService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		E2DB5FB92A3C079100D3B88F = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				E2DB5FC92A3C079100D3B88F /* CityListViewController.swift */,
+				B32A0C372A4C175500F9A343 /* CityListPresenter.swift */,
+				B32A0C392A4C17FF00F9A343 /* CityListRouter.swift */,
+				B32A0C442A4C39D100F9A343 /* CityListContainer.swift */,
+				B3A726F02A4DBFBF00C99552 /* CityListCellEntity.swift */,
 			);
 			path = CityList;
 			sourceTree = "<group>";
@@ -79,6 +120,8 @@
 		E2DB5FDA2A3C07AE00D3B88F /* UI Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B362F99F2A4DA8A8009649B4 /* Services */,
+				B32A0C3F2A4C33DB00F9A343 /* Root */,
 				E2DB5FD92A3C079800D3B88F /* CityList */,
 				E2DB5FDB2A3C07BD00D3B88F /* CityProfile */,
 			);
@@ -89,6 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				E2DB5FDD2A3C08EE00D3B88F /* CityProfileViewController.swift */,
+				B32A0C3B2A4C1AE600F9A343 /* CityProfileRouter.swift */,
+				B32A0C3D2A4C1B7100F9A343 /* CityProfileContainer.swift */,
+				B3A726EE2A4DB85600C99552 /* CityProfilePresenter.swift */,
 			);
 			path = CityProfile;
 			sourceTree = "<group>";
@@ -173,9 +219,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B32A0C432A4C33F800F9A343 /* RootViewController.swift in Sources */,
+				B3A726F12A4DBFBF00C99552 /* CityListCellEntity.swift in Sources */,
+				B32A0C3C2A4C1AE600F9A343 /* CityProfileRouter.swift in Sources */,
+				B32A0C452A4C39D100F9A343 /* CityListContainer.swift in Sources */,
 				E2DB5FCA2A3C079100D3B88F /* CityListViewController.swift in Sources */,
+				B32A0C3E2A4C1B7100F9A343 /* CityProfileContainer.swift in Sources */,
+				B32A0C382A4C175500F9A343 /* CityListPresenter.swift in Sources */,
+				B32A0C412A4C33EA00F9A343 /* RootRouter.swift in Sources */,
 				E2DB5FC62A3C079100D3B88F /* AppDelegate.swift in Sources */,
+				B32A0C3A2A4C17FF00F9A343 /* CityListRouter.swift in Sources */,
 				E2DB5FC82A3C079100D3B88F /* SceneDelegate.swift in Sources */,
+				B3A726EF2A4DB85600C99552 /* CityProfilePresenter.swift in Sources */,
+				B362F9A12A4DA91A009649B4 /* CityWeatherService.swift in Sources */,
 				E2DB5FDE2A3C08EE00D3B88F /* CityProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,7 +379,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VFLQV8L2KW;
+				DEVELOPMENT_TEAM = 73ULCYDC6D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -351,7 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VFLQV8L2KW;
+				DEVELOPMENT_TEAM = 73ULCYDC6D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

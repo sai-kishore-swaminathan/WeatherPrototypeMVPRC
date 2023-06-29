@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 final class CityProfileViewController: UIViewController {
+    unowned var presenter: CityProfilePresenter!
+
     // MARK: - Properties
     private let cityLabel: UILabel = {
         let label = UILabel()
@@ -59,6 +61,7 @@ final class CityProfileViewController: UIViewController {
     private func setupUI() {
         // Configure city label
         cityLabel.text = "City Name"
+        view.backgroundColor = .white 
 
         // Add labels to the stack view
         weatherInfoStackView.addArrangedSubview(cityLabel)
@@ -82,9 +85,9 @@ final class CityProfileViewController: UIViewController {
     private func displayWeatherInfo() {
         // Fetch weather data for the selected city
         // Update the labels with the weather information
-        let cityName = "City Name"
-        let temperature = "Temperature: 25°C"
-        let humidity = "Humidity: 70%"
+        let cityName = presenter.city.name
+        let temperature = presenter.city.temperataure
+        let humidity = presenter.city.humidity
 
         cityLabel.text = cityName
         temperatureLabel.text = temperature
@@ -114,6 +117,7 @@ final class CityProfileViewController: UIViewController {
     }
 
     private func deleteCity() {
+        presenter.deleteCity()
         // Delete the city from data source or perform other required actions
         // Example: Navigate back to the city list screen or show a success message
     }
